@@ -7,23 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header><h1 class="hedd">Calculator</h1></header>
-    <main>
-      <div class="container">
+    <div class="container">
+        <header>
+          <div class="heddcontainer"><h1 class="hedd">CALCULATOR</h1></div>
+        </header>
         <div class="bar">
-          <h1 class="current_status"></h1>
-          <h1 class="t_and_d"></h1>
+          <h1 class="current_status">stat</h1>
+          <h1 class="t_and_d">clock</h1>
         </div>
-        <div class="screen"><h1 class="screeninfo"></h1></div>
+        <main>
+        <div class="screen"><div class="upperscreen"><h1 class="hiddenscreen">hii</h1></div>
+        <div class="lowerscreen"><h1 class="screeninfo">Hii 2</h1></div></div>
         <div class="numbers">
-          <button class="square" name="Square">Square</button>
-          <button class="power" name="Power" value="^">Power</button>
+          <button class="square" name="Square" value="**2">Square</button>
+          <button class="power" name="Power" value="**">Power</button>
           <button class="clear" name="Clear">C</button>
           <button class="cross" name="Erase">X</button>
           <button class="root" name="Sqr_Root" value="√">Root</button>
-          <button class="percentage" name="Percentage" value="%">%</button>
-          <button class="floor" name="Floor_Division" value="/">/</button>
-          <button class="division" name="Division" value="÷">÷</button>
+          <button class="percentage" name="Percentage" value="٪"">٪</button>
+          <button class="floor" name="Modulus" value="%">Mod</button>
+          <button class="division" name="Division" value="/">/</button>
           <button class="number one" value="1" name="One">1</button>
           <button class="number two" value="2" name="Two">2</button>
           <button class="number three" value="3" name="Three">3</button>
@@ -37,12 +40,12 @@
           <button class="number nine" value="9" name="Nine">9</button>
           <button class="addition" value="+" name="Addition" value="+">+</button>
           <button class="number zero" value="0" name="Zero">0</button>
-          <button class="number point" value="." name="Point" value=".">.</button>
+          <button class="point" value="." name="Point">.</button>
           <button class="number double_zero" value="00" name="Dbl_zero">00</button>
-          <button class="equal" name="Equal_to" value="=">=</button>
+          <button class="equal" name="Equal_to">=</button>
+        </main>
         </div>
       </div>
-    </main>
   </body>
   <script src="script.js"></script>
 </html>
