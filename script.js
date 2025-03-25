@@ -37,23 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           }
       }
-      if (!valueArr.includes("﹪")) {
-        equalButton.addEventListener("click",()=>{
-            valueArr = []
-            lowerScreen.innerText=eval(totalValue)
-            valueArr.push((eval(totalValue)).toString())
-        })
-      }
-      if (idName === "Square") {
-        valueArr = []
-        lowerScreen.innerText = eval(totalValue);
-        valueArr.push((eval(totalValue)).toString())
-      }
-      if (idName === "Sqr_Root") {
-        valueArr = []
-        lowerScreen.innerText = Math.sqrt(parseInt(totalValue)).toFixed(5);
-        valueArr.push((Math.sqrt(parseInt(totalValue)).toFixed(2)).toString())
-      }
+        if (!valueArr.includes("﹪")) {
+          equalButton.addEventListener("click",()=>{
+              valueArr = []
+              if (isValidEval(totalValue)===true) {
+                lowerScreen.innerText=eval(totalValue)
+                valueArr.push((eval(totalValue)).toString())
+              }else{
+                lowerScreen.innerText="Please Enter A Valid Expression"
+              }
+          })
+        }
+        if (idName === "Square") {
+          valueArr = []
+          lowerScreen.innerText = eval(totalValue);
+          valueArr.push((eval(totalValue)).toString())
+        }
+        if (idName === "Sqr_Root") {
+          valueArr = []
+          lowerScreen.innerText = Math.sqrt(parseInt(totalValue)).toFixed(5);
+          valueArr.push((Math.sqrt(parseInt(totalValue)).toFixed(2)).toString())
+        }
     });
   });
 });
@@ -84,4 +88,13 @@ crossButton.addEventListener("click", () => {
 function Percentage(a, b) {
   let value = (a / 100) * b;
   return value;
+}
+
+function isValidEval(){
+  try {
+    eval(totalValue)
+    return true
+  } catch (error) {
+    return false
+  }
 }
